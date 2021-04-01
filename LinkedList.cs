@@ -21,4 +21,7 @@ public class LinkedList
         last = node;
         Length = 1;
     }
+
+    public bool IsEmpty(){return !(bool)Length}
+
 }
