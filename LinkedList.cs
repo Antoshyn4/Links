@@ -26,7 +26,7 @@ public class LinkedList
 
     public void Print()
     {
-        if (!IsEmpty)
+        if (!IsEmpty())
         {
             foreach (var item in LinkedList)
             {
@@ -35,5 +35,22 @@ public class LinkedList
         }
         else
             Console.WriteLine("Error, List is empty");
+    }
+
+    public void Add(T data)
+    {
+        var node = new Node<T>(data);
+        if (IsEmpty())
+        {
+            first = node;
+            last = node;
+            Length = 1;
+        }
+        else
+        {
+            last.Next = node;
+            last = node;
+            Length++;
+        }
     }
 }
