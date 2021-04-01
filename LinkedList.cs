@@ -7,4 +7,18 @@ public class LinkedList
 
     public int Length { get; private set; }
 
+    public LinkedList()
+    {
+        first = null;
+        last = null;
+        Length = 0;
+    }
+
+    public LinkedList(T data)
+    {
+        var node = new Node<T>(data);
+        first = node;
+        last = node;
+        Length = 1;
+    }
 }
