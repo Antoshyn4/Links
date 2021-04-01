@@ -24,4 +24,16 @@ public class LinkedList
 
     public bool IsEmpty(){return !(bool)Length}
 
+    public void Print()
+    {
+        if (!IsEmpty)
+        {
+            foreach (var item in LinkedList)
+            {
+                Console.WriteLine(item.Node);
+            }
+        }
+        else
+            Console.WriteLine("Error, List is empty");
+    }
 }
